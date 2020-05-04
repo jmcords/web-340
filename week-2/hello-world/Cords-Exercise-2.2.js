@@ -10,7 +10,7 @@
 
 const header = require('../../Cords-header.js');
 
-console.log(header.display("Jason", "Cords", "Exercise 1.3"),"\n"); //header
+console.log(header.display("Jason", "Cords", "Exercise 2.2"),"\n"); //header
 
 var express = require("express"); //requires express module
 
