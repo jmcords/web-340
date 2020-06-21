@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "ems",
   "author": "Professor Krasso",
   "private": true,
   "dependencies": {
@@ -11,5 +11,12 @@
     "helmet": "^3.23.1",
     "mongoose": "^5.9.19",
     "morgan": "^1.10.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "v12.16.0"
   }
 }
+
