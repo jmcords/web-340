@@ -1,3 +1,30 @@
 <%- include("navbar") -%>
+<div role="main" class="container" style="width: 50%;">
+      <br /><br />
+      <h2 class="text-success">-- Employee Entry Page --</h2>
+      <form method="post" action="/process">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" />
+        </div>
+        <div class="form-group">
+          <label for="firstName">Last Name:</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" />
+        </div>
+
+        <div class="form-group">
+          <!-- CSRF token -->
+          <input name="_csrf" value="<%= csrfToken %>" type="hidden" />
+
+          <button type="submit" class="btn btn-secondary float-right">
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <br /><br />
+
+      <a href="/list.ejs">Return to Employee Records</a>
+    </div>
 
 <%- include("footer") -%>

@@ -1,3 +1,31 @@
 <%- include("navbar") -%>
 
+<% if (employee.length) { %>
+<div role="main" class="container" style="width: 50%;">
+  <br /><br />
+  <h2 class="text-success">‐‐ Employee Listing ‐‐</h2><br />
+  <a href="/new.ejs">Add New</a>
+  <table class="table table‐hover">
+    <thead class="thead‐dark">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Function</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% employee.forEach(function (emp) { %>
+      <tr>
+        <td><%= emp.firstName %></td>
+        <td><%= emp.lastName %></td>
+        <td><a href="/view/<%= emp.lastName %>.ejs">VIEW</a></td>
+      </tr>
+      </tbody>
+      <% }) %>
+  </table>
+  <% } else { %>
+  No entries! <a href="/new.ejs">Add one!</a>
+  <% } %>
+</div>
+
 <%- include("footer") -%>
